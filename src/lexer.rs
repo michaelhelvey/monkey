@@ -1,7 +1,7 @@
 use miette::SourceSpan;
 use unicode_segmentation::UnicodeSegmentation;
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq)]
 pub enum TokenType {
     // Operators:
     Equals,     // =
@@ -39,7 +39,7 @@ pub enum TokenType {
     Illegal,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug)]
 pub struct Token {
     pub token_type: TokenType,
     pub literal: String,
